@@ -10,7 +10,7 @@ RUN sudo apt update && \
     sudo apt upgrade -y
 
 # Install prereqs
-RUN sudo apt install -y git dnsmasq hostapd bc build-essential dkms raspberrypi-kernel-headers
+RUN sudo apt install -y git dnsmasq hostapd bc build-essential dkms
 
 # DKMS as above
 RUN VER=$(sed -n 's/\PACKAGE_VERSION="\(.*\)"/\1/p' dkms.conf)
